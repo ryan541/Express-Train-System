@@ -73,10 +73,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Booking.Designer.vb">
-      <DependentUpon>Booking.vb</DependentUpon>
+    <Compile Include="BookingReservation.Designer.vb">
+      <DependentUpon>BookingReservation.vb</DependentUpon>
     </Compile>
-    <Compile Include="Booking.vb">
+    <Compile Include="BookingReservation.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Registration.vb">
@@ -109,8 +109,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Booking.resx">
-      <DependentUpon>Booking.vb</DependentUpon>
+    <EmbeddedResource Include="BookingReservation.resx">
+      <DependentUpon>BookingReservation.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registration.resx">
       <DependentUpon>Registration.vb</DependentUpon>
