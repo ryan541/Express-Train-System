@@ -136,9 +136,9 @@ Partial Class Registration
         '
         'Cmd_Save
         '
-        Me.Cmd_Save.BackColor = System.Drawing.Color.White
+        Me.Cmd_Save.BackColor = System.Drawing.Color.Blue
         Me.Cmd_Save.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Cmd_Save.ForeColor = System.Drawing.Color.Blue
+        Me.Cmd_Save.ForeColor = System.Drawing.Color.White
         Me.Cmd_Save.Location = New System.Drawing.Point(586, 346)
         Me.Cmd_Save.Name = "Cmd_Save"
         Me.Cmd_Save.Size = New System.Drawing.Size(85, 34)
@@ -148,9 +148,9 @@ Partial Class Registration
         '
         'cmdUpdate
         '
-        Me.cmdUpdate.BackColor = System.Drawing.Color.White
+        Me.cmdUpdate.BackColor = System.Drawing.Color.Blue
         Me.cmdUpdate.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdUpdate.ForeColor = System.Drawing.Color.Blue
+        Me.cmdUpdate.ForeColor = System.Drawing.Color.White
         Me.cmdUpdate.Location = New System.Drawing.Point(695, 346)
         Me.cmdUpdate.Name = "cmdUpdate"
         Me.cmdUpdate.Size = New System.Drawing.Size(82, 34)
@@ -160,9 +160,9 @@ Partial Class Registration
         '
         'cmdDelete
         '
-        Me.cmdDelete.BackColor = System.Drawing.Color.White
+        Me.cmdDelete.BackColor = System.Drawing.Color.Red
         Me.cmdDelete.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdDelete.ForeColor = System.Drawing.Color.Red
+        Me.cmdDelete.ForeColor = System.Drawing.Color.White
         Me.cmdDelete.Location = New System.Drawing.Point(646, 386)
         Me.cmdDelete.Name = "cmdDelete"
         Me.cmdDelete.Size = New System.Drawing.Size(78, 32)

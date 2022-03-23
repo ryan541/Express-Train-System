@@ -25,6 +25,8 @@ Public Class Registration
         cmd.Parameters.Add(New OleDbParameter("Email Address", CType(txtEmail.Text, String)))
         cmd.Parameters.Add(New OleDbParameter("Password", CType(txtPassword.Text, String)))
         MsgBox("" & (txtFirstName.Text) & " " & (txtSecondName.Text) & " Sign Up Saved!!!")
+        BookingPage.Show()
+        Me.Hide()
         Try
             cmd.ExecuteNonQuery()
             cmd.Dispose()
@@ -39,6 +41,11 @@ Public Class Registration
             MsgBox(ex.Message)
 
         End Try
+
+        'If txtFirstName.Text = Nothing Or txtSecondName.Text = Nothing Or txtID.Text = Nothing Or txtNumber.Text = Nothing Or txtEmail.Text = Nothing Or txtPassword.Text = Nothing Then MsgBox("Please Enter Credentials", "ERROR")
+
+        Exit Sub
+
 
     End Sub
 
@@ -48,6 +55,8 @@ Public Class Registration
         command = "UPDATE Bookings SET [First Name]='" & txtFirstName.Text & "',[Second Name]='" & txtSecondName.Text & "' ,[Phone Number]='" & txtNumber.Text & "',[Email Address]='" & txtEmail.Text & "',[Password]='" & txtPassword.Text & "' WHERE [ID Number]='" & txtID.Text & "'"
         Dim cmd As OleDbCommand = New OleDbCommand(command, myConnection)
         MsgBox("" & txtFirstName.Text & " " & txtSecondName.Text & " Updated!!!!")
+        BookingPage.Show()
+        Me.Hide()
         Try
             cmd.ExecuteNonQuery()
             cmd.Dispose()
@@ -58,9 +67,12 @@ Public Class Registration
             txtNumber.Clear()
             txtEmail.Clear()
             txtPassword.Clear()
+
         Catch ex As Exception
             MsgBox(ex.Message)
+
         End Try
+
 
     End Sub
 
@@ -69,6 +81,8 @@ Public Class Registration
         command = "Delete from Bookings where [ID Number]= '" & txtID.Text & "' "
         Dim cmd As OleDbCommand = New OleDbCommand(command, myConnection)
         MsgBox("" & txtID.Text & " Deleted!!!!")
+        BookingPage.Show()
+        Me.Hide()
         Try
             cmd.ExecuteNonQuery()
             cmd.Dispose()
@@ -82,7 +96,9 @@ Public Class Registration
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
+
     End Sub
+
 
     Private Sub Registration_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 

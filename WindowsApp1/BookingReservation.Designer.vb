@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Booking
+Partial Class BookingResevation
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,7 @@ Partial Class Booking
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Booking))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(BookingResevation))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
@@ -142,7 +142,7 @@ Partial Class Booking
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Font = New System.Drawing.Font("Times New Roman", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.Location = New System.Drawing.Point(209, 28)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(119, 15)
@@ -212,7 +212,7 @@ Partial Class Booking
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Times New Roman", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(18, 28)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(91, 15)
@@ -242,18 +242,21 @@ Partial Class Booking
         '
         'cmdBook
         '
+        Me.cmdBook.BackColor = System.Drawing.Color.Blue
+        Me.cmdBook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.cmdBook.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdBook.ForeColor = System.Drawing.Color.Blue
-        Me.cmdBook.Location = New System.Drawing.Point(118, 228)
+        Me.cmdBook.ForeColor = System.Drawing.Color.White
+        Me.cmdBook.Location = New System.Drawing.Point(118, 226)
         Me.cmdBook.Name = "cmdBook"
         Me.cmdBook.Size = New System.Drawing.Size(139, 43)
         Me.cmdBook.TabIndex = 11
         Me.cmdBook.Text = "BOOK TRAIN"
-        Me.cmdBook.UseVisualStyleBackColor = True
+        Me.cmdBook.UseVisualStyleBackColor = False
         '
         'ComboBox4
         '
         Me.ComboBox4.FormattingEnabled = True
+        Me.ComboBox4.Items.AddRange(New Object() {"First Class", "Economy Class"})
         Me.ComboBox4.Location = New System.Drawing.Point(6, 169)
         Me.ComboBox4.Name = "ComboBox4"
         Me.ComboBox4.Size = New System.Drawing.Size(358, 21)
@@ -272,6 +275,7 @@ Partial Class Booking
         'ComboBox3
         '
         Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9"})
         Me.ComboBox3.Location = New System.Drawing.Point(260, 94)
         Me.ComboBox3.Name = "ComboBox3"
         Me.ComboBox3.Size = New System.Drawing.Size(104, 21)
@@ -280,6 +284,7 @@ Partial Class Booking
         'ComboBox2
         '
         Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9"})
         Me.ComboBox2.Location = New System.Drawing.Point(128, 93)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(103, 21)
@@ -288,6 +293,7 @@ Partial Class Booking
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9"})
         Me.ComboBox1.Location = New System.Drawing.Point(6, 93)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(105, 21)
@@ -349,7 +355,7 @@ Partial Class Booking
         Me.Label6.TabIndex = 15
         Me.Label6.Text = "EXPRESSTRAIN BOOKING SYSTEM"
         '
-        'Booking
+        'BookingResevation
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -358,7 +364,7 @@ Partial Class Booking
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Name = "Booking"
+        Me.Name = "BookingResevation"
         Me.Text = "Booking Form"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

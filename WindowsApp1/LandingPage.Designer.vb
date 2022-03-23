@@ -35,9 +35,9 @@ Partial Class LandingPage
         '
         'cmdSignIn
         '
-        Me.cmdSignIn.BackColor = System.Drawing.Color.White
+        Me.cmdSignIn.BackColor = System.Drawing.Color.Blue
         Me.cmdSignIn.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdSignIn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.cmdSignIn.ForeColor = System.Drawing.Color.White
         Me.cmdSignIn.Location = New System.Drawing.Point(467, 322)
         Me.cmdSignIn.Name = "cmdSignIn"
         Me.cmdSignIn.Size = New System.Drawing.Size(97, 36)
@@ -47,9 +47,9 @@ Partial Class LandingPage
         '
         'cmdSignUp
         '
-        Me.cmdSignUp.BackColor = System.Drawing.Color.White
+        Me.cmdSignUp.BackColor = System.Drawing.Color.Blue
         Me.cmdSignUp.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdSignUp.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.cmdSignUp.ForeColor = System.Drawing.Color.White
         Me.cmdSignUp.Location = New System.Drawing.Point(601, 322)
         Me.cmdSignUp.Name = "cmdSignUp"
         Me.cmdSignUp.Size = New System.Drawing.Size(103, 36)

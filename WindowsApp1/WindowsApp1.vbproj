@@ -73,10 +73,28 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BillingPage.Designer.vb">
+      <DependentUpon>BillingPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BillingPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BookingReservation.Designer.vb">
       <DependentUpon>BookingReservation.vb</DependentUpon>
     </Compile>
     <Compile Include="BookingReservation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingPage.Designer.vb">
+      <DependentUpon>BookingPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BookingPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginPage.Designer.vb">
+      <DependentUpon>LoginPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Registration.vb">
@@ -109,8 +127,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="BillingPage.resx">
+      <DependentUpon>BillingPage.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BookingReservation.resx">
       <DependentUpon>BookingReservation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookingPage.resx">
+      <DependentUpon>BookingPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginPage.resx">
+      <DependentUpon>LoginPage.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registration.resx">
       <DependentUpon>Registration.vb</DependentUpon>
