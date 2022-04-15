@@ -5,16 +5,15 @@ Public Class LoginPage
     Dim command As String
     Dim myConnection As OleDbConnection = New OleDbConnection
 
+    'connection to the DataBase
     Private Sub conDB()
-        link = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\user\Documents\TrainBooking.mdb"
+        link = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\ryanm\Documents\TrainBooking.mdb"
         conString = link
         myConnection.ConnectionString = conString
         myConnection.Open()
     End Sub
 
-    'ReadOnly con As New OleDbConnection(My.Settings.link)
-
-
+    'link to register
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
         Registration.Show()
         Me.Hide()
@@ -22,34 +21,36 @@ Public Class LoginPage
 
     Private Sub cmdSignIn_Click(sender As Object, e As EventArgs) Handles cmdSignIn.Click
         Call conDB()
+
+        'checks if data is entered
         If txtID.Text = Nothing Or txtPass.Text = Nothing Then
-            MsgBox("Please Enter Credentials!!!")
+            MsgBox("Please Enter Credentials!!!", MsgBoxStyle.Exclamation)
+            Close()
+        Else
+
+            'Checks ID number and password
+            Dim cmd As OleDbCommand = New OleDbCommand(command, myConnection)
+            cmd = New OleDbCommand("SELECT * FROM Registration WHERE [ID Number] = '" & txtID.Text & "' and [Password] ='" & txtPass.Text & "' ", myConnection)
+            cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = txtID.Text
+            cmd.Parameters.AddWithValue("@2", OleDbType.VarChar).Value = txtPass.Text
+
+            Try
+                cmd.ExecuteNonQuery()
+                cmd.Dispose()
+                myConnection.Close()
+                txtID.Clear()
+                txtPass.Clear()
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+            MsgBox("Login Found", MsgBoxStyle.Information)
+            BookingPage.Show()
+            Me.Hide()
         End If
+        myConnection.Close()
+    End Sub
 
-        If myConnection.State = ConnectionState.Closed Then
-            myConnection.Open()
-        End If
+    Private Sub LoginPage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        'Using command As New OleDbCommand("SELECT COUNT (*) from Bookings Where txtID = @txtID AND txtPass = @txtPass", myConnection)
-        'command.Parameters.AddWithValue("@txtID", OleDbType.VarChar).Value = txtID.Text.Trim
-        'command.Parameters.AddWithValue("@txtPass", OleDbType.VarChar).Value = txtPass.Text.Trim
-        'MsgBox("Login Found")
-        'Dim count = Convert.ToInt32(command.ExecuteScalar())
-
-        ''If count > 0 Then
-        'MsgBox("Login Found")
-        'BookingPage.Show()
-        'Me.Hide()
-
-        'Else
-        'MsgBox("Invalid Credentials!!!")
-        'End If
-
-        'End Using
-
-
-
-        BookingPage.Show()
-        Me.Hide()
     End Sub
 End Class

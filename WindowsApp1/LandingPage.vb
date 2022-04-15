@@ -10,4 +10,12 @@
         Me.Hide()
 
     End Sub
+
+    Private Sub BookingToolStripMenuItem_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
+
+    End Sub
 End Class
